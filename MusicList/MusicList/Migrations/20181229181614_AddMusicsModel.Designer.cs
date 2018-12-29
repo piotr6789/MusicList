@@ -9,8 +9,8 @@ using MusicList.Models;
 namespace MusicList.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181229170128_AddMusicModel")]
-    partial class AddMusicModel
+    [Migration("20181229181614_AddMusicsModel")]
+    partial class AddMusicsModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace MusicList.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Music");
+                    b.ToTable("Musics");
                 });
 #pragma warning restore 612, 618
         }

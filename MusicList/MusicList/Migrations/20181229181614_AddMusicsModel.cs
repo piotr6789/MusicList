@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MusicList.Migrations
 {
-    public partial class AddMusicModel : Migration
+    public partial class AddMusicsModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Music",
+                name: "Musics",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -17,14 +17,14 @@ namespace MusicList.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Music", x => x.Id);
+                    table.PrimaryKey("PK_Musics", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Music");
+                name: "Musics");
         }
     }
 }

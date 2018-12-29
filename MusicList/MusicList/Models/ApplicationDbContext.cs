@@ -12,6 +12,6 @@ namespace MusicList.Models
             : base(options)
         { }
 
-        public DbSet<Music> Music { get; set; }
+        public DbSet<Music> Musics { get; set; }
     }
 }
