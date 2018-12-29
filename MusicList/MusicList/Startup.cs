@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MusicList.Models;
 
 namespace MusicList
 {
@@ -30,7 +32,7 @@ namespace MusicList
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server=LAPTOP-ESH7TJI8\\MSSQLSERVER1;Database=MusicListProject; Integrated Security=True; Trusted_Connection=True;"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
